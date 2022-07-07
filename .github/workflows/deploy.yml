@@ -22,6 +22,6 @@ jobs:
         with:
           proxy_host: ${{ secrets.HOST }}
           proxy_username: ${{ secrets.USERNAME }}
-          proxy_password: ${{ secrets.SSHKEY }}
+          proxy_key: ${{ secrets.SSHKEY }}
           proxy_port: ${{ secrets.PORT }}
           script: "cd /www/test && ./.scripts/deploy.sh"
