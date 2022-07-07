@@ -20,8 +20,8 @@ jobs:
       - name: Deploy to server
         uses: appleboy/ssh-action@master
         with:
-          proxy_host: ${{ secrets.HOST }}
-          proxy_username: ${{ secrets.USERNAME }}
-          proxy_key: ${{ secrets.SSHKEY }}
-          proxy_port: ${{ secrets.PORT }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.SSHKEY }}
+          port: ${{ secrets.PORT }}
           script: "cd /www/test && ./.scripts/deploy.sh"
