@@ -22,7 +22,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          # key: ${{ secrets.SSHKEY }}
+          # password: ${{ secrets.PASSWORD }}
+          key: ${{ secrets.SSHKEY }}
           port: ${{ secrets.PORT }}
           script: "cd /www/test && ./.scripts/deploy.sh"
