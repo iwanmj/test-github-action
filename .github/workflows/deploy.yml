@@ -26,3 +26,4 @@ jobs:
           key: ${{ secrets.SSHKEY }}
           port: ${{ secrets.PORT }}
           script: "cd www/test && .scripts/deploy.sh"
+          debut: true
