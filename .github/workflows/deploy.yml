@@ -39,7 +39,8 @@ jobs:
             # password: ${{ secrets.PASSWORD }}
             key: ${{ secrets.SSHKEY }}
             port: ${{ secrets.SSHPORT }}
-            script: "cd ${{ secrets.WORK_DIR }} && docker compose pull && docker compose up -d && exit"
+            script: "ls"
+            # script: "cd ${{ secrets.WORK_DIR }} && docker compose pull && docker compose up -d && exit"
             debug: true
         
         - name: cleanup
