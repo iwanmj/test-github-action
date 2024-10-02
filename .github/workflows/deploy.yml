@@ -38,7 +38,7 @@ jobs:
             username: ${{ secrets.USERNAME }}
             # password: ${{ secrets.PASSWORD }}
             key: ${{ secrets.SSHKEY }}
-            port: ${{ secrets.PORT }}
+            port: ${{ secrets.SSHPORT }}
             script: "cd ${{ secrets.WORK_DIR }} && docker compose pull && docker compose up -d && exit"
             debug: true
         
