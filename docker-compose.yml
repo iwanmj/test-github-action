@@ -1,10 +1,6 @@
-version: '3'
 services:
-  web:
-    container_name: webapp-frontend
-    build: .
+  frontend:
+    container_name: frontend
+    image: ghcr.io/iwanmj/test-deploy:latest
     ports:
-      - "5000:5000"
-  redis:
-    container_name: redis-backend
-    image: "redis:alpine"
+      - 9191:9191
