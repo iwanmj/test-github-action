@@ -32,7 +32,7 @@ jobs:
         steps:
         - uses: actions/checkout@v2
         - name: Deploy to server
-          uses: appleboy/ssh-action@v0.1.9
+          uses: appleboy/ssh-action@master
           with:
             host: ${{ secrets.HOST }}
             username: ${{ secrets.USERNAME }}
@@ -40,6 +40,7 @@ jobs:
             key: ${{ secrets.SSHKEY }}
             port: ${{ secrets.PORT }}
             script: "cd ${{ secrets.WORK_DIR }} && docker compose pull && docker compose up -d && exit"
+            debug: true
         
         - name: cleanup
           run: rm -rf ~/.ssh
