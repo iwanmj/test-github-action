@@ -42,6 +42,3 @@ jobs:
             script: "ls"
             # script: "cd ${{ secrets.WORK_DIR }} && docker compose pull && docker compose up -d && exit"
             debug: true
-        
-        - name: cleanup
-          run: rm -rf ~/.ssh
