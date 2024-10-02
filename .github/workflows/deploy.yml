@@ -30,7 +30,16 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-        - name: connect and pull
-          run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd ${{ secrets.WORK_DIR }} && docker compose pull && docker compose up -d && exit"
+        - uses: actions/checkout@v2
+        - name: Deploy to server
+          uses: appleboy/ssh-action@master
+          with:
+            host: ${{ secrets.HOST }}
+            username: ${{ secrets.USERNAME }}
+            # password: ${{ secrets.PASSWORD }}
+            key: ${{ secrets.SSHKEY }}
+            port: ${{ secrets.PORT }}
+            script: "cd ${{ secrets.WORK_DIR }} && docker compose pull && docker compose up -d && exit"
+        
         - name: cleanup
           run: rm -rf ~/.ssh
