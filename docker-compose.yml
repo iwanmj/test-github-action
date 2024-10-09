@@ -1,6 +1,6 @@
 services:
   frontend:
     container_name: frontend
-    image: ghcr.io/iwanmj/test-deploy:latest
+    image: test-auto-deploy:latest
     ports:
       - 9191:9191
