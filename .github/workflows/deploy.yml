@@ -11,10 +11,7 @@ env:
 
 jobs:
     deploy:
-        needs: publish
-        name: deploy image
         runs-on: ubuntu-latest
-
         steps:
         - uses: actions/checkout@v2
         - name: Deploy to server
