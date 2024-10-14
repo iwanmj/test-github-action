@@ -1,5 +1,5 @@
 #Deriving the latest base image
-FROM node:16.17.0-bullseye-slim
+FROM php:7.4-fpm-alpine
 
 WORKDIR /app
 
