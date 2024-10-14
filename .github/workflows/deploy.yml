@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "dev" ]
 
-env:
+# env:
   # Use docker.io for Docker Hub if empty
   # REGISTRY: ghcr.io
   # IMAGE_NAME: test-auto-deploy:latest
