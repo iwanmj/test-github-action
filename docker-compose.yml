@@ -2,12 +2,10 @@ version: '1.0'
 
 services:
   web:
-    image: app-name:latest
+    image: laravel-test-project:latest
     build:
       target: web
       context: .
-    env_file:
-      - .env
     ports:
       - "8000:80"
     volumes:
@@ -28,7 +26,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - dbdata:/var/lib/mysql
+      - dbdata:./var/lib/mysql
 
 volumes:
   dbdata:
