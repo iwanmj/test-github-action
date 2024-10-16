@@ -22,6 +22,6 @@ jobs:
             # password: ${{ secrets.PASSWORD }}
             key: ${{ secrets.SSH_PRIVATE_KEY }}
             port: ${{ secrets.SSHPORT }}
-            # script: "ls"
-            script: "./test_docker_deploy"
+            script: "ls"
+            # script: "./test_docker_deploy"
             debug: true
