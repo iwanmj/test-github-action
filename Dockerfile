@@ -12,7 +12,7 @@ RUN apt-get update -y && \
     echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/sury-php.list && \
     wget -qO - https://packages.sury.org/php/apt.gpg | apt-key add - && \
     apt-get update -y && \
-    apt-get install -y --no-install-recommends php8.1 php8.1-curl php8.1-xml php8.1-zip php8.1-gd php8.1-mbstring php8.1-mysql && \
+    apt-get install -y --no-install-recommends php7.0 php7.0-curl php7.0-xml php7.0-zip php7.0-gd php7.0-mbstring php7.0-mysql && \
     apt-get update -y && \
     apt-get install -y composer && \
     composer update && \
