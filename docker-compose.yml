@@ -2,7 +2,7 @@ version: '1.0'
 
 services:
   web:
-    image: laravel-test-project:latest
+    image: test-github-action:latest
     build:
       target: web
       context: .
